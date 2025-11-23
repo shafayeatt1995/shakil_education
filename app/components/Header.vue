@@ -25,10 +25,7 @@
               <div
                 class="flex items-center justify-between lg:justify-start cursor-pointer py-3 hover:underline w-full lg:w-auto"
               >
-                <NuxtLink
-                  :to="menu.to"
-                  class="font-normal text-base text-gray-800"
-                >
+                <NuxtLink :to="menu.to" class="text-sm text-gray-800">
                   {{ menu.title }}
                 </NuxtLink>
                 <ChevronDown v-if="menu.items" class="ml-1" />
@@ -43,7 +40,7 @@
                   v-for="(subItem, idx) in menu.items"
                   :key="idx"
                   :to="subItem.to"
-                  class="block px-4 py-2.5 text-gray-700 hover:bg-[#1ea1db] hover:text-white"
+                  class="block px-4 py-2.5 text-gray-700 hover:bg-[#1ea1db] hover:text-white text-sm"
                 >
                   {{ subItem.title }}
                 </NuxtLink>
