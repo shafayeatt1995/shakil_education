@@ -39,19 +39,19 @@ const images = [
 
   <section class="container mx-auto lg:px-4 py-6">
     <div class="grid grid-cols-1 lg:grid-cols-4">
-      <div>
+      <div data-aos="fade-up" data-aos-delay="200">
         <img src="/images/gallery/1.png" alt="" class="w-full" />
         <img src="/images/gallery/2.png" alt="" class="w-full" />
       </div>
-      <div>
+      <div data-aos="fade-up" data-aos-delay="400">
         <img src="/images/gallery/3.png" alt="" class="w-full" />
         <img src="/images/gallery/4.png" alt="" class="w-full" />
       </div>
-      <div>
+      <div data-aos="fade-up" data-aos-delay="600">
         <img src="/images/gallery/5.png" alt="" class="w-full" />
         <img src="/images/gallery/6.png" alt="" class="w-full" />
       </div>
-      <div>
+      <div data-aos="fade-up" data-aos-delay="800">
         <img src="/images/gallery/7.png" alt="" class="w-full" />
         <div class="relative">
           <img

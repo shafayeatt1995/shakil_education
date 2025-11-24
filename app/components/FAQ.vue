@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto py-8 lg:py-16 px-2 lg:px-0">
-    <div class="max-w-3xl mx-auto">
+    <div class="max-w-3xl mx-auto" data-aos="fade-up">
       <h2
         class="font-['Cabin_Sketch'] font-bold text-4xl uppercase bg-gradient-to-l from-[rgba(0,189,255,1)] to-[rgba(19,68,126,1)] bg-clip-text text-transparent text-center"
       >
@@ -11,7 +11,7 @@
         and simple answers to guide your journey.
       </p>
     </div>
-    <div class="mt-8 max-w-4xl mx-auto">
+    <div class="mt-8 max-w-4xl mx-auto" data-aos="fade-up">
       <div
         v-for="(faq, i) in faqs"
         :key="i"

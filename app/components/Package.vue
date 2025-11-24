@@ -1,6 +1,6 @@
 <template>
   <section class="container mx-auto py-8 lg:py-16">
-    <div class="max-w-3xl mx-auto">
+    <div class="max-w-3xl mx-auto" data-aos="fade-up">
       <p
         class="font-['Cabin_Sketch'] text-[#13447E] text-center text-sm lg:text-base"
       >
@@ -16,7 +16,7 @@
         handpicked to give you unforgettable memories.
       </p>
     </div>
-    <div class="mt-14">
+    <div class="mt-14" data-aos="fade-up">
       <div
         class="flex gap-2 justify-between items-center max-w-4xl mx-auto whitespace-nowrap overflow-x-auto"
       >

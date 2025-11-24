@@ -1,15 +1,14 @@
 <template>
   <section class="container mx-auto py-8 lg:py-16">
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-4xl mx-auto" data-aos="fade-up">
       <h2
         class="font-['Cabin_Sketch'] font-bold text-4xl lg:text-6xl uppercase bg-gradient-to-l from-[rgba(0,189,255,1)] to-[rgba(19,68,126,1)] bg-clip-text text-transparent text-center"
       >
         Academic Excellence Meets Cultural Discovery
       </h2>
     </div>
-    <div class="flex items-center gap-1"></div>
 
-    <div class="relative overflow-hidden mt-10">
+    <div class="relative overflow-hidden mt-10" data-aos="fade-up">
       <div
         class="flex transition-transform duration-500"
         :style="{

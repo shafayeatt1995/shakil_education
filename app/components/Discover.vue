@@ -1,7 +1,7 @@
 <template>
   <section class="container mx-auto px-2 lg:px-0">
     <div class="flex flex-col lg:flex-row gap-5 py-8 lg:py-16">
-      <div class="w-full">
+      <div class="w-full" data-aos="fade-right">
         <div class="flex flex-col gap-4">
           <h2
             class="font-['Cabin_Sketch'] font-bold text-3xl lg:text-5xl uppercase bg-gradient-to-l from-[#00bdff] to-[#13447e] bg-clip-text text-transparent text-center lg:text-left"
@@ -36,7 +36,7 @@
           </div>
         </div>
       </div>
-      <div class="w-full">
+      <div class="w-full" data-aos="fade-left">
         <iframe
           width="100%"
           src="https://www.youtube.com/embed/d9kgRkXeVTI?si=qeR8oFwYERJFhIOU"
@@ -49,7 +49,7 @@
         ></iframe>
       </div>
     </div>
-    <div class="py-8 lg:py-16">
+    <div class="py-8 lg:py-16" data-aos="fade-up">
       <div
         class="grid grid-cols-2 md:grid-cols-4 gap-x-[1px] gap-y-[1px] bg-gray-300"
       >

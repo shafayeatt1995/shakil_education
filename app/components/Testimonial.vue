@@ -1,6 +1,6 @@
 <template>
   <section class="container mx-auto py-8 lg:py-16">
-    <div class="flex flex-col lg:flex-row justify-between">
+    <div class="flex flex-col lg:flex-row justify-between" data-aos="fade-up">
       <div>
         <h2
           class="font-semibold text-4xl lg:text-[32px] uppercase bg-gradient-to-l from-[#00bdff] to-[#13447e] bg-clip-text text-transparent mb-6 px-2 lg:px-0 text-center lg:text-left"
@@ -33,7 +33,7 @@
     </div>
 
     <!-- Slider -->
-    <div class="relative overflow-hidden">
+    <div class="relative overflow-hidden" data-aos="fade-up">
       <div
         class="flex transition-transform duration-500"
         :style="{

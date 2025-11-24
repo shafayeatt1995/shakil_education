@@ -1,7 +1,7 @@
 <template>
   <section class="container mx-auto py-8 lg:py-16 lg:pt-24">
     <div class="flex flex-col lg:flex-row gap-10 lg:gap-5">
-      <div class="flex-1 relative px-2 lg:px-0">
+      <div class="flex-1 relative px-2 lg:px-0" data-aos="fade-right">
         <img
           src="/icons/plane.svg"
           alt=""
@@ -24,7 +24,7 @@
           </button>
         </div>
       </div>
-      <div class="flex-1">
+      <div class="flex-1" data-aos="fade-left">
         <img
           src="/images/hero/travel.png"
           alt=""
@@ -36,7 +36,12 @@
       <div
         class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16 mt-5 lg:mt-40"
       >
-        <div class="" v-for="(feature, i) in features" :key="i">
+        <div
+          v-for="(feature, i) in features"
+          :key="i"
+          data-aos="fade-up"
+          :data-aos-delay="200 * i"
+        >
           <h3 class="font-bold text-2xl md:text-xl lg:text-2xl text-[#13447E]">
             {{ feature.title }}
           </h3>
