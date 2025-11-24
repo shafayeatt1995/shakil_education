@@ -4,11 +4,11 @@
       <div class="w-full">
         <div class="flex flex-col gap-4">
           <h2
-            class="font-['Cabin_Sketch'] font-bold text-3xl lg:text-5xl uppercase bg-gradient-to-l from-[#00bdff] to-[#13447e] bg-clip-text text-transparent"
+            class="font-['Cabin_Sketch'] font-bold text-3xl lg:text-5xl uppercase bg-gradient-to-l from-[#00bdff] to-[#13447e] bg-clip-text text-transparent text-center lg:text-left"
           >
             Discover the world, one journey at a time.
           </h2>
-          <p>
+          <p class="text-center lg:text-left">
             From breathtaking landscapes to cultural wonders, we craft journeys
             that bring your dream destinations to life. Whether you're planning
             a relaxing getaway or an adventure-filled expedition, our team

@@ -1,12 +1,12 @@
 <template>
-  <div class="container mx-auto py-8 lg:py-16">
+  <div class="container mx-auto py-8 lg:py-16 px-2 lg:px-0">
     <div class="max-w-3xl mx-auto">
       <h2
         class="font-['Cabin_Sketch'] font-bold text-4xl uppercase bg-gradient-to-l from-[rgba(0,189,255,1)] to-[rgba(19,68,126,1)] bg-clip-text text-transparent text-center"
       >
         Frequently Asked Questions
       </h2>
-      <p class="text-center text-gray-600 mt-2">
+      <p class="text-sm lg:text-base text-center text-gray-600 mt-2">
         Have questions about studying abroad? Our FAQ section gives you clear
         and simple answers to guide your journey.
       </p>
@@ -18,17 +18,18 @@
         class="mb-4 bg-[#F7F7F7] rounded-xl"
       >
         <div
-          class="flex items-center justify-between cursor-pointer p-4"
+          class="flex justify-between gap-2 cursor-pointer p-4"
           @click="toggleFaq(i)"
         >
           <span class="font-semibold">{{ faq.question }}</span>
-          <span
-            :class="[
-              'text-gray-600 transition-all duration-200',
-              activeFaq === i ? 'rotate-45' : '',
-            ]"
-            ><Plus
-          /></span>
+          <span class="text-gray-600">
+            <Plus
+              :class="[
+                ' transition-all duration-200',
+                activeFaq === i ? 'rotate-45' : '',
+              ]"
+            />
+          </span>
         </div>
         <SlideUpDown :active="activeFaq === i" :duration="200">
           <p class="pt-3 p-4">{{ faq.answer }}</p>

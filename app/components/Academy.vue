@@ -19,7 +19,7 @@
         <div
           v-for="(academy, index) in academies"
           :key="index"
-          class="flex-shrink-0 w-[33.3333%] px-1"
+          class="flex-shrink-0 w-full lg:w-1/3 px-1"
         >
           <img
             :src="academy.image"
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div
-        class="max-w-2xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/50 backdrop-blur-xl p-10 rounded-2xl z-10"
+        class="max-w-2xl lg:absolute lg:top-1/2 lg:left-1/2 transform lg:-translate-x-1/2 lg:-translate-y-1/2 bg-white/50 backdrop-blur-xl p-10 rounded-2xl z-10"
       >
         <h2 class="text-2xl font-bold text-center">
           {{ selectedAcademy.name }}
@@ -37,13 +37,13 @@
         <p class="text-center">{{ selectedAcademy.message }}</p>
         <button
           @click="prev"
-          class="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 z-20 bg-white/50 backdrop-blur-xl size-9 rounded-full flex justify-center items-center"
+          class="absolute top-1/2 left-0 transform -translate-y-1/2 lg:-translate-x-1/2 z-20 bg-white/50 backdrop-blur-xl size-9 rounded-full flex justify-center items-center"
         >
           <ChevronLeft class="size-7 group-hover:text-white relative z-20" />
         </button>
         <button
           @click="next"
-          class="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/2 z-20 bg-white/50 backdrop-blur-xl size-9 rounded-full flex justify-center items-center"
+          class="absolute top-1/2 right-0 transform -translate-y-1/2 lg:translate-x-1/2 z-20 bg-white/50 backdrop-blur-xl size-9 rounded-full flex justify-center items-center"
         >
           <ChevronRight class="size-7 group-hover:text-white relative z-20" />
         </button>
@@ -121,11 +121,11 @@ const academies = ref([
   },
 ]);
 
-const itemsToShow = 3;
+const itemsToShow = ref(3);
 
 const currentIndex = ref(0);
 
-const maxIndex = academies.value.length - itemsToShow;
+const maxIndex = academies.value.length - itemsToShow.value;
 
 function next() {
   if (currentIndex.value < maxIndex) {
@@ -141,5 +141,18 @@ function prev() {
 
 const selectedAcademy = computed(() => {
   return academies.value[currentIndex.value];
+});
+
+function updateItemsToShow() {
+  itemsToShow.value = window.innerWidth < 768 ? 1 : 3;
+}
+
+onMounted(() => {
+  updateItemsToShow();
+  window.addEventListener("resize", updateItemsToShow);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateItemsToShow);
 });
 </script>

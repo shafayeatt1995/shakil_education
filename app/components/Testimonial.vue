@@ -1,20 +1,22 @@
 <template>
   <section class="container mx-auto py-8 lg:py-16">
-    <div class="flex justify-between">
+    <div class="flex flex-col lg:flex-row justify-between">
       <div>
         <h2
-          class="font-semibold text-[32px] uppercase bg-gradient-to-l from-[#00bdff] to-[#13447e] bg-clip-text text-transparent mb-6"
+          class="font-semibold text-4xl lg:text-[32px] uppercase bg-gradient-to-l from-[#00bdff] to-[#13447e] bg-clip-text text-transparent mb-6 px-2 lg:px-0 text-center lg:text-left"
         >
           What Our Students Say
         </h2>
 
-        <button
-          class="flex justify-center items-center px-5 py-3 gap-2 bg-[#EFFAFF] border border-[#b9e7fb] rounded-full mb-8"
-        >
-          Review us on <img src="/icons/google.svg" />
-        </button>
+        <div class="flex justify-center lg:justify-start">
+          <button
+            class="flex justify-center items-center px-5 py-3 gap-2 bg-[#EFFAFF] border border-[#b9e7fb] rounded-full mb-8"
+          >
+            Review us on <img src="/icons/google.svg" />
+          </button>
+        </div>
       </div>
-      <div class="flex items-center gap-1">
+      <div class="lg:flex items-center gap-1 hidden">
         <button
           @click="prev"
           class="flex justify-center items-center size-10 border-2 border-[#00BDFF] rounded-full text-[#00BDFF] hover:text-white hover:bg-[#00BDFF] transition-all duration-200"
@@ -41,9 +43,9 @@
         <div
           v-for="(testimonial, index) in testimonials"
           :key="index"
-          class="flex-shrink-0 w-[33.3333%] px-2"
+          class="flex-shrink-0 w-full lg:w-1/3 px-2"
         >
-          <div class="bg-[#F7F7F7] p-6 py-8 rounded-3xl">
+          <div class="bg-[#F7F7F7] p-6 py-8 lg:rounded-3xl">
             <div class="flex justify-between">
               <div class="flex items-center gap-2">
                 <img :src="testimonial.image" alt="" />
@@ -67,6 +69,20 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="flex items-center justify-center gap-5 lg:hidden mt-3">
+      <button
+        @click="prev"
+        class="flex justify-center items-center size-10 border-2 border-[#00BDFF] rounded-full text-[#00BDFF] hover:text-white hover:bg-[#00BDFF] transition-all duration-200"
+      >
+        <ChevronLeft class="w-6 h-6 group-hover:text-white relative z-20" />
+      </button>
+      <button
+        @click="next"
+        class="flex justify-center items-center size-10 border-2 border-[#00BDFF] rounded-full text-[#00BDFF] hover:text-white hover:bg-[#00BDFF] transition-all duration-200"
+      >
+        <ChevronRight class="w-6 h-6 group-hover:text-white relative z-20" />
+      </button>
     </div>
 
     <div class="flex justify-center mt-10">
@@ -149,11 +165,11 @@ const testimonials = ref([
   },
 ]);
 
-const itemsToShow = 3;
+const itemsToShow = ref(3);
 
 const currentIndex = ref(0);
 
-const maxIndex = testimonials.value.length - itemsToShow;
+const maxIndex = testimonials.value.length - itemsToShow.value;
 
 function next() {
   if (currentIndex.value < maxIndex) {
@@ -166,4 +182,17 @@ function prev() {
     currentIndex.value--;
   }
 }
+
+function updateItemsToShow() {
+  itemsToShow.value = window.innerWidth < 768 ? 1 : 3;
+}
+
+onMounted(() => {
+  updateItemsToShow();
+  window.addEventListener("resize", updateItemsToShow);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateItemsToShow);
+});
 </script>

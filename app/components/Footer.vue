@@ -1,18 +1,30 @@
 <template>
   <footer class="bg-[#13447E] bg-[url('/images/footer-bg.png')]">
-    <div class="container mx-auto py-8 text-white">
+    <div class="container mx-auto py-8 text-white px-4 lg:px-0">
       <div class="flex flex-col items-center">
         <img src="/images/footer-logo.png" alt="" class="w-32" />
         <p class="text-white">Your Bright Future is Just one Flight Away</p>
         <div class="flex justify-center gap-4 mt-3">
-          <img src="/icons/linkedin.svg" alt="" class="size-6" />
-          <img src="/icons/x.svg" alt="" class="size-6" />
-          <img src="/icons/facebook.svg" alt="" class="size-6" />
-          <img src="/icons/instagram.svg" alt="" class="size-6" />
-          <img src="/icons/youtube.svg" alt="" class="size-6" />
+          <a href="#">
+            <img src="/icons/linkedin.svg" alt="" class="size-6" />
+          </a>
+          <a href="#">
+            <img src="/icons/x.svg" alt="" class="size-6" />
+          </a>
+          <a href="#">
+            <img src="/icons/facebook.svg" alt="" class="size-6" />
+          </a>
+          <a href="#">
+            <img src="/icons/instagram.svg" alt="" class="size-6" />
+          </a>
+          <a href="#">
+            <img src="/icons/youtube.svg" alt="" class="size-6" />
+          </a>
         </div>
       </div>
-      <div class="grid grid-cols-7 gap-5 text-white mt-16">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-7 gap-8 lg:gap-5 text-white mt-16"
+      >
         <div>
           <h3
             class="uppercase font-semibold border-b border-[#1EA1DB] inline-block"
@@ -130,7 +142,7 @@
       <hr class="mt-10 mb-5" />
       <div>
         <p class="text-center font-semibold">Our Office</p>
-        <div class="grid grid-cols-4 gap-5 mt-5">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-5 mt-5">
           <div v-for="office in office" :key="office.name" class="mt-1">
             <p
               class="uppercase font-semibold border-b border-[#1EA1DB] inline-block text-sm"

@@ -2,7 +2,7 @@
   <section class="container mx-auto py-8 lg:py-16 px-2 lg:px-0">
     <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-5">
       <div class="w-full flex flex-col gap-5 px-4 lg:px-0 relative">
-        <div class="absolute -top-3/4 right-0 z-[1] hidden lg:block">
+        <div class="absolute -top-[175px] right-0 z-[1] hidden lg:block">
           <img
             src="/icons/decorative-brush.svg"
             alt="Decorative"
@@ -10,14 +10,16 @@
           />
         </div>
         <h1
-          class="font-['Cabin_Sketch'] font-bold text-4xl lg:text-6xl uppercase bg-gradient-to-l from-[rgba(0,189,255,1)] to-[rgba(19,68,126,1)] bg-clip-text text-transparent"
+          class="font-['Cabin_Sketch'] font-bold text-4xl lg:text-6xl uppercase bg-gradient-to-l from-[rgba(0,189,255,1)] to-[rgba(19,68,126,1)] bg-clip-text text-transparent text-center lg:text-left"
         >
           Discover the world, one journey at a time.
         </h1>
-        <p class="font-normal text-base md:text-xl text-gray-500">
+        <p
+          class="font-normal text-base md:text-xl text-gray-500 text-center lg:text-left"
+        >
           Handpicked travel packages designed to make every trip unforgettable.
         </p>
-        <div>
+        <div class="flex justify-center lg:justify-start">
           <button
             class="py-4 px-8 rounded-lg bg-gradient-to-r from-[#13447e] to-[#00bdff] border-none font-['Cabin_Sketch'] font-normal text-xl text-white transition-opacity duration-200 hover:opacity-90"
           >

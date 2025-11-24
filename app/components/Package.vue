@@ -1,28 +1,32 @@
 <template>
   <section class="container mx-auto py-8 lg:py-16">
     <div class="max-w-3xl mx-auto">
-      <p class="font-['Cabin_Sketch'] text-[#13447E] text-center">
+      <p
+        class="font-['Cabin_Sketch'] text-[#13447E] text-center text-sm lg:text-base"
+      >
         Discover the places travelers love the most!
       </p>
       <h2
-        class="font-['Cabin_Sketch'] font-bold text-6xl uppercase text-center bg-gradient-to-r from-[#00bdff] to-[#13447e] bg-clip-text text-transparent"
+        class="font-['Cabin_Sketch'] font-bold text-4xl lg:text-6xl uppercase text-center bg-gradient-to-r from-[#00bdff] to-[#13447e] bg-clip-text text-transparent"
       >
         Tour Packages Section
       </h2>
-      <p class="text-center text-gray-500">
+      <p class="text-sm lg:text-base text-center text-gray-500">
         From breathtaking landscapes to vibrant cultures, these destinations are
         handpicked to give you unforgettable memories.
       </p>
     </div>
     <div class="mt-14">
-      <div class="flex gap-2 justify-between items-center max-w-4xl mx-auto">
+      <div
+        class="flex gap-2 justify-between items-center max-w-4xl mx-auto whitespace-nowrap overflow-x-auto"
+      >
         <button
           v-for="(pack, i) in packages"
           :key="i"
           :class="[
-            ' text-[#13447E] rounded-t-3xl font-semibold transition-all duration-200',
+            ' text-[#13447E] rounded-t-3xl font-semibold transition-all duration-200 px-5',
             active === i
-              ? 'bg-[#F2F2F7] text-xl w-[calc(100%+150px)] h-20'
+              ? 'bg-[#F2F2F7] text-xl w-[calc(100%+150px)] h-16 lg:h-20'
               : 'w-full h-16 bg-[#E1EDFA]',
           ]"
           @click="active = i"
@@ -30,19 +34,31 @@
           {{ pack }}
         </button>
       </div>
-      <div class="bg-[#F2F2F7] p-10 rounded-3xl max-w-7xl mx-auto">
-        <div class="grid grid-cols-5 gap-5">
+      <div class="bg-[#F2F2F7] p-5 lg:p-10 lg:rounded-3xl max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-5">
           <div class="col-span-3 space-y-2">
-            <img src="/images/package/1.png" class="rounded-xl h-72 w-full" />
+            <img
+              src="/images/package/1.png"
+              class="rounded-xl lg:h-72 w-full"
+            />
             <div class="grid grid-cols-3 gap-2 justify-between">
-              <img src="/images/package/2.png" class="rounded-xl h-56 w-full" />
-              <img src="/images/package/3.png" class="rounded-xl h-56 w-full" />
-              <img src="/images/package/4.png" class="rounded-xl h-56 w-full" />
+              <img
+                src="/images/package/2.png"
+                class="rounded-xl lg:h-56 w-full"
+              />
+              <img
+                src="/images/package/3.png"
+                class="rounded-xl lg:h-56 w-full"
+              />
+              <img
+                src="/images/package/4.png"
+                class="rounded-xl lg:h-56 w-full"
+              />
             </div>
           </div>
           <div class="col-span-2">
             <div class="flex flex-col justify-between h-full">
-              <div>
+              <div class="mb-10">
                 <p class="font-bold text-[#13447E] mb-2">Day {{ day }}</p>
                 <hr />
                 <h3 class="font-bold text-[32px] text-[#13447E] mt-3">
@@ -68,10 +84,12 @@
             </div>
           </div>
         </div>
-        <div class="flex justify-between gap-2 flex-1 mt-10">
+        <div
+          class="flex whitespace-nowrap overflow-x-auto justify-between gap-2 flex-1 mt-10 pb-5"
+        >
           <button
             :class="[
-              'flex w-full p-5 justify-center items-center  rounded-3xl shadow-lg',
+              'flex w-full p-5 justify-center items-center  rounded-3xl shadow-lg transition-all duration-200',
               day === d
                 ? 'bg-[#13447E] text-white'
                 : 'bg-white shadow-[0px_5px_3px_rgba(151,215,255,0.2)]',

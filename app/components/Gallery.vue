@@ -37,8 +37,8 @@ const images = [
     </div>
   </section> -->
 
-  <section class="container mx-auto px-4 py-6">
-    <div class="grid grid-cols-4">
+  <section class="container mx-auto lg:px-4 py-6">
+    <div class="grid grid-cols-1 lg:grid-cols-4">
       <div>
         <img src="/images/gallery/1.png" alt="" class="w-full" />
         <img src="/images/gallery/2.png" alt="" class="w-full" />
@@ -57,10 +57,12 @@ const images = [
           <img
             src="/icons/gallery-plane.svg"
             alt=""
-            class="absolute -z-[1] -top-[170%] right-5"
+            class="absolute -z-[1] -top-[220%] lg:-top-[170%] right-5"
           />
-          <h3 class="font-bold text-6xl text-[#13447E] text-center">Gallery</h3>
-          <p class="text-gray-600 text-center mt-3">
+          <h3 class="font-bold text-3xl lg:text-6xl text-[#13447E] text-center">
+            Gallery
+          </h3>
+          <p class="text-gray-600 text-center mt-3 text-sm lg:text-base">
             See exciting photos from our photo gallery &amp; choose your next
             trip easily
           </p>
